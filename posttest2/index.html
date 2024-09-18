@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posttest 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo-resto.jpeg" alt="Logo Restoran" class="logo">
+        <h1>Posttest 2</h1>
+       
+    </header>
+
+    <main>
+        <section id="order" class="order-form">
+            <h2>Form Pemesanan</h2>
+            <form id="reservation-form">
+                <p><strong>Nama:</strong> Muhammad Ammar S.K.</p>
+                <p><strong>Alamat:</strong> Jl. Jakarta Blok L No. 19</p>
+                <p><strong>Pelayan:</strong> Araki</p>
+                <p><strong>Tanggal Pemesanan:</strong></p>
+                <input type="date" name="reservation-date" id="reservation-date" required>
+                <h3>Pesanan Anda:</h3>
+                <div class="order-item">
+                    <img src="nasi-goreng.jpeg" alt="Nasi Goreng Spesial">
+                    <div class="item-details">
+                        <p><strong>Nasi Goreng Spesial</strong></p>
+                        <p>Rp 30.000</p>
+                    </div>
+                    <input type="number" name="quantity-nasi-goreng" class="quantity" value="1" min="1">
+                </div>
+                <div class="order-item">
+                    <img src="es-teh-manis.jpeg" alt="Es Teh Manis">
+                    <div class="item-details">
+                        <p><strong>Es Teh Manis</strong></p>
+                        <p>Rp 5.000</p>
+                    </div>
+                    <input type="number" name="quantity-es-teh" class="quantity" value="1" min="1">
+                </div>
+                <div class="pricing">
+                    <p><strong>Subtotal:</strong> Rp 35.000</p>
+                    <p><strong>Pajak (10%):</strong> Rp 3.500</p>
+                    <p><strong>Total:</strong> Rp 38.500</p>
+                </div>
+
+                <div class="payment-method">
+                    <h3>Pilih Metode Pembayaran:</h3>
+                    <label>
+                        <input type="radio" name="payment-method" value="OVO" required> OVO
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="GoPay"> GoPay
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="BCA"> Bank BCA
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="BRI"> Bank BRI
+                    </label>
+                </div>
+
+                <button type="submit">Kirim Pesanan</button>
+            </form>
+        </section>
+
+        <section id="additional-form" class="additional-form">
+            <form id="identity-form">
+                <label for="name">Nama:</label>
+                <a>Muhammad Ammar Syauqi Kamil</a> 
+
+                <label for="id-number">NIM:</label>
+                <a>2309106069</a>
+
+                <label for="task">Pemograman Web:</label>
+                <a href="https://classroom.google.com/c/NzEwMjM1Mjg5MTM4/a/NzA2MTI4OTQ1MTg1/details" target="_blank">Posttest 2</a><br>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Restoran Saya. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        document.getElementById('reservation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Pesanan Anda telah dikirim!');
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
